@@ -13,7 +13,7 @@ public class Battleship {
         String[][] tableSecondPlayerUi = new String[5][5];
         int firstPlayerScore = 0;
         int secondPlayerScore = 0;
-        int[] separateLines = new int[20];
+        int[] separateLines = new int[100];
 
 
         System.out.println("Welcome to Battleship game!");
@@ -52,16 +52,15 @@ public class Battleship {
                 break;
             }
 
-
+           
             tableSecondPlayerUi = BattleshipGameMethods.ShotingToPlayerTable(tableSecondPlayer, tableSecondPlayerUi, firstPlayerName);
-            BattleshipGameMethods.Print2D(tableSecondPlayerUi);
             firstPlayerScore = BattleshipGameMethods.PlayerScore(tableSecondPlayerUi);
+            BattleshipGameMethods.Print2D(tableSecondPlayerUi);
             System.out.println("Score value for " + firstPlayerName + " is: " + firstPlayerScore);
-
-
+            
             tableFirstPlayerUi = BattleshipGameMethods.ShotingToPlayerTable(tableFirstPlayer, tableFirstPlayerUi, secondPlayerName);
-            BattleshipGameMethods.Print2D(tableFirstPlayerUi);
             secondPlayerScore = BattleshipGameMethods.PlayerScore(tableFirstPlayerUi);
+            BattleshipGameMethods.Print2D(tableFirstPlayerUi);
             System.out.println("Score value for " + secondPlayerName + " is: " + secondPlayerScore);
         }
     }

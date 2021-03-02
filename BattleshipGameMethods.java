@@ -5,8 +5,9 @@ public class BattleshipGameMethods {
 
     public static String[][] InsertShipsOnTable(String[][] testArray, String playerName) {
         Scanner keyboard = new Scanner(System.in);
+        System.out.println("IMPORTANT: Table is 5 x 5. you can set values from 0 to 4...");
+        System.out.println("IMPORTANT: entered coorditante will be separated by a whitespace like: " +"0 3");
         System.out.println(playerName + " Enter your ships' coordinates:");
-        System.out.println("entered coorditante will be separated by a whitespace");
         int ships = 0;
         String coordinateValue;
 
